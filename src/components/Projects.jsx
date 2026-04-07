@@ -8,6 +8,11 @@ import businessWebsiteImg from "@/assets/projects/business-website.jpg";
 import wordpressBlogImg from "@/assets/projects/wordpress-blog.jpg";
 import ecommerceStoreImg from "@/assets/projects/ecommerce-store.jpg";
 import reactDashboardImg from "@/assets/projects/react-dashboard.jpg";
+import gymWebsiteImg from "@/assets/projects/gym-website.jpg";
+import restaurantWebsiteImg from "@/assets/projects/restaurant-website.jpg";
+import realestateWebsiteImg from "@/assets/projects/realestate-website.jpg";
+import travelWebsiteImg from "@/assets/projects/travel-website.jpg";
+import photographyWebsiteImg from "@/assets/projects/photography-website.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,6 +50,46 @@ const projects = [
     gradient: "from-orange-500/20 to-red-500/20",
     image: reactDashboardImg,
   },
+  {
+    title: "Gym & Fitness Website",
+    description:
+      "Dynamic fitness website with membership plans, trainer profiles, and workout schedules",
+    tech: ["React.js", "Tailwind CSS", "JavaScript"],
+    gradient: "from-red-500/20 to-rose-500/20",
+    image: gymWebsiteImg,
+  },
+  {
+    title: "Restaurant Website",
+    description:
+      "Elegant restaurant site with online menu, reservation system, and gallery",
+    tech: ["HTML", "CSS", "JavaScript"],
+    gradient: "from-amber-500/20 to-yellow-500/20",
+    image: restaurantWebsiteImg,
+  },
+  {
+    title: "Real Estate Platform",
+    description:
+      "Property listing website with search filters, image galleries, and contact forms",
+    tech: ["React.js", "Bootstrap", "JavaScript"],
+    gradient: "from-sky-500/20 to-blue-500/20",
+    image: realestateWebsiteImg,
+  },
+  {
+    title: "Travel Agency Website",
+    description:
+      "Vibrant travel site with destination packages, booking forms, and travel guides",
+    tech: ["HTML", "CSS", "JavaScript"],
+    gradient: "from-orange-500/20 to-amber-500/20",
+    image: travelWebsiteImg,
+  },
+  {
+    title: "Photography Portfolio",
+    description:
+      "Minimal photography portfolio with lightbox gallery, categories, and client proofing",
+    tech: ["React.js", "Tailwind CSS", "Framer Motion"],
+    gradient: "from-neutral-500/20 to-stone-500/20",
+    image: photographyWebsiteImg,
+  },
 ];
 
 const Projects = () => {
@@ -53,7 +98,6 @@ const Projects = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Header animation
       gsap.fromTo(
         ".projects-header",
         { opacity: 0, y: 30 },
@@ -68,7 +112,6 @@ const Projects = () => {
         }
       );
 
-      // Cards staggered animation
       cardsRef.current.forEach((card, index) => {
         if (!card) return;
 
@@ -80,7 +123,7 @@ const Projects = () => {
             y: 0,
             scale: 1,
             duration: 0.6,
-            delay: index * 0.15,
+            delay: index * 0.1,
             ease: "power3.out",
             scrollTrigger: {
               trigger: card,
@@ -123,7 +166,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={project.title}
@@ -132,12 +175,12 @@ const Projects = () => {
               onMouseEnter={() => handleCardHover(index, true)}
               onMouseLeave={() => handleCardHover(index, false)}
             >
-            <Card className="group relative overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-300 h-full">
-                {/* Project Thumbnail */}
+              <Card className="group relative overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-300 h-full">
                 <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-40 group-hover:opacity-60 transition-opacity duration-300`} />
@@ -150,9 +193,9 @@ const Projects = () => {
                         {project.title}
                       </h3>
                       {project.link ? (
-                        <a 
-                          href={project.link} 
-                          target="_blank" 
+                        <a
+                          href={project.link}
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="p-2 rounded-lg bg-secondary hover:bg-primary/20 transition-colors"
                         >
