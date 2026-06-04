@@ -13,10 +13,20 @@ import restaurantWebsiteImg from "@/assets/projects/restaurant-website.jpg";
 import realestateWebsiteImg from "@/assets/projects/realestate-website.jpg";
 import travelWebsiteImg from "@/assets/projects/travel-website.jpg";
 import photographyWebsiteImg from "@/assets/projects/photography-website.jpg";
+import newbieAiImg from "@/assets/projects/newbie-ai.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
+  {
+    title: "Newbie AI",
+    description:
+      "AI-powered web app for beginners to explore and interact with artificial intelligence in a friendly interface",
+    tech: ["React.js", "Tailwind CSS", "AI"],
+    gradient: "from-indigo-500/20 to-purple-500/20",
+    link: "https://rajamohammed07.github.io/Newbie-ai/",
+    image: newbieAiImg,
+  },
   {
     title: "Business Website",
     description:
