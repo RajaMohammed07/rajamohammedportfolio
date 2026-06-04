@@ -13,6 +13,7 @@ import restaurantWebsiteImg from "@/assets/projects/restaurant-website.jpg";
 import realestateWebsiteImg from "@/assets/projects/realestate-website.jpg";
 import travelWebsiteImg from "@/assets/projects/travel-website.jpg";
 import photographyWebsiteImg from "@/assets/projects/photography-website.jpg";
+import newbieAiImg from "@/assets/projects/newbie-ai.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
