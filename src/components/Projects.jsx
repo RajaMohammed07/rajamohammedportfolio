@@ -13,19 +13,19 @@ import restaurantWebsiteImg from "@/assets/projects/restaurant-website.jpg";
 import realestateWebsiteImg from "@/assets/projects/realestate-website.jpg";
 import travelWebsiteImg from "@/assets/projects/travel-website.jpg";
 import photographyWebsiteImg from "@/assets/projects/photography-website.jpg";
-import newbieAiImg from "@/assets/projects/newbie-ai.jpg";
+import aiRecipeMakerImg from "@/assets/projects/ai-recipe-maker.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    title: "Newbie AI",
+    title: "AI Recipe Maker",
     description:
-      "AI-powered web app for beginners to explore and interact with artificial intelligence in a friendly interface",
+      "AI-powered recipe generator that creates personalized cooking instructions based on available ingredients and dietary preferences",
     tech: ["React.js", "Tailwind CSS", "AI"],
     gradient: "from-indigo-500/20 to-purple-500/20",
-    link: "https://rajamohammed07.github.io/Newbie-ai/",
-    image: newbieAiImg,
+    link: "https://rajamohammed07.github.io/AI_Recipe_Maker/",
+    image: aiRecipeMakerImg,
   },
   {
     title: "Business Website",
