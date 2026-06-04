@@ -19,6 +19,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
+    title: "Newbie AI",
+    description:
+      "AI-powered web app for beginners to explore and interact with artificial intelligence in a friendly interface",
+    tech: ["React.js", "Tailwind CSS", "AI"],
+    gradient: "from-indigo-500/20 to-purple-500/20",
+    link: "https://rajamohammed07.github.io/Newbie-ai/",
+    image: newbieAiImg,
+  },
+  {
     title: "Business Website",
     description:
       "Modern responsive website with smooth animations and mobile-first design",
