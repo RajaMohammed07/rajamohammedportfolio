@@ -19,13 +19,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    title: "Newbie AI",
+    title: "AI Recipe Maker",
     description:
-      "AI-powered web app for beginners to explore and interact with artificial intelligence in a friendly interface",
+      "AI-powered recipe generator that creates personalized cooking instructions based on available ingredients and dietary preferences",
     tech: ["React.js", "Tailwind CSS", "AI"],
     gradient: "from-indigo-500/20 to-purple-500/20",
-    link: "https://rajamohammed07.github.io/Newbie-ai/",
-    image: newbieAiImg,
+    link: "https://rajamohammed07.github.io/AI_Recipe_Maker/",
+    image: aiRecipeMakerImg,
   },
   {
     title: "Business Website",
